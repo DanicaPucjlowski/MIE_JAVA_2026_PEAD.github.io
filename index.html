@@ -1,74 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Natsure Aviation Insurance</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    header, footer { background: #002a5c; color: #fff; padding: 15px; text-align: center;}
-    nav a { margin: 0 10px; color: #fff; text-decoration: none; font-weight: bold;}
-    .container { padding: 20px; max-width: 1000px; margin: auto; }
-    .products ul { list-style-type: square; padding-left: 20px; }
-    .section-title { font-size: 1.8em; margin-top: 30px; color: #002a5c; }
-    .btn { background: #0066cc; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 4px; }
-    .btn:hover { background: #005bb5; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chord Aviation Insurance</title>
+
+<style>
+:root {
+    --navy: #0B1F3A;
+    --silver: #C0C7CF;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--navy);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--navy);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: var(--silver);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--white);
+}
+
+.hero {
+    background: linear-gradient(rgba(11,31,58,0.85), rgba(11,31,58,0.85)),
+                url('https://images.unsplash.com/photo-1508614999368-9260051292e5');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 140px 60px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: var(--silver);
+}
+
+.btn {
+    background-color: var(--silver);
+    color: var(--navy);
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--white);
+}
+
+section {
+    padding: 80px 60px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    border: 1px solid var(--silver);
+    padding: 30px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.about {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: var(--silver);
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    background-color: var(--navy);
+    color: var(--silver);
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Natsure Aviation Insurance</h1>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about-us">About</a>
-    <a href="/products">Products</a>
-    <a href="/contact">Contact</a>
-  </nav>
+    <h1>Chord Aviation Insurance</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Coverage</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
 </header>
 
-<div class="container">
+<section class="hero">
+    <h2>Precision Coverage for Aviation Professionals</h2>
+    <p>Specialist aviation insurance solutions designed to protect aircraft owners, operators, and aviation businesses.</p>
+    <a href="#" class="btn">Request a Quote</a>
+</section>
 
-  <h2 class="section-title">Comprehensive Aviation Insurance Solutions</h2>
-  <p>A specialist Aviation Insurance underwriting manager and your aviation partner of choice. :contentReference[oaicite:1]{index=1}</p>
-  <a class="btn" href="#contact">Get a Quote</a>
+<section>
+    <h2 class="section-title">Our Coverage Solutions</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Aircraft Hull Insurance</h3>
+            <p>Comprehensive protection for physical damage to aircraft, whether in-flight or on the ground.</p>
+        </div>
 
-  <h3 class="section-title">Protect Your Assets with Tailored Aviation Coverage</h3>
-  <p>When it comes to safeguarding your aviation assets, comprehensive aviation insurance is paramount. At Natsure, we offer a range of tailored solutions to meet the diverse needs of the aviation industry. Whether you require aircraft coverage for your fleet, aviation liability insurance for legal protection, or specialized drone insurance for UAVs, our comprehensive policies provide the peace of mind you need. :contentReference[oaicite:2]{index=2}</p>
+        <div class="card">
+            <h3>Passenger & Third Party Liability</h3>
+            <p>Financial protection against claims arising from passenger injury or third-party damage.</p>
+        </div>
 
-  <h3 class="section-title">What We Cover</h3>
-  <p>We protect you through our innovative and leading edge range of aviation insurance products and with a passion for service that goes the extra mile. :contentReference[oaicite:3]{index=3}</p>
+        <div class="card">
+            <h3>Commercial Aviation Coverage</h3>
+            <p>Tailored insurance solutions for charter operators, flight schools, and aviation businesses.</p>
+        </div>
 
-  <div class="products">
-    <h4 class="section-title">Our Products</h4>
-    <ul>
-      <li>Hull All Risk</li>
-      <li>Hull War Risk</li>
-      <li>Third Party & Passenger Legal Liability</li>
-      <li>Airport Owners & Operators Liability</li>
-      <li>Personal Accident for Crew (flying only)</li>
-      <li>Pilot Excess Cover</li>
-      <li>Drones</li>
-      <li>Hull Deductible (support with Hull Insurance)</li>
-      <li>No Claim Bonus Protection Plan</li>
-    </ul>
-  </div>
+        <div class="card">
+            <h3>Drone & UAV Insurance</h3>
+            <p>Specialist coverage for commercial drone operators and unmanned aerial systems.</p>
+        </div>
+    </div>
+</section>
 
-  <h3 class="section-title">Protect Your Business with Aviation Liability Coverage</h3>
-  <p>Protecting your business from legal liabilities is crucial in the aviation industry. Our comprehensive aviation liability insurance policies cover a wide range of risks, including airline liability coverage, aircraft liability assurance, and aviation legal protection. Whether you’re an air carrier or a private pilot, our pilot liability coverage ensures you’re protected against potential lawsuits and claims. :contentReference[oaicite:4]{index=4}</p>
+<section class="about">
+    <h2 class="section-title">Why Choose Chord Aviation Insurance?</h2>
+    <p>
+        At Chord Aviation Insurance, we understand that aviation demands precision.
+        Our underwriting approach mirrors the engineering principles behind every wing —
+        measured, balanced, and built for performance. We work closely with aviation
+        professionals to deliver structured, responsive, and reliable protection.
+    </p>
+</section>
 
-  <h3 class="section-title">Specialised Drone & Aviation Insurance</h3>
-  <p>As drones become increasingly popular for commercial and recreational use, proper insurance coverage is essential. Natsure offers specialised drone insurance solutions, including UAV coverage, unmanned aircraft insurance, and aerial drone assurance. Whether you use drones for photography, surveillance, or delivery, our cover provides comprehensive protection. :contentReference[oaicite:5]{index=5}</p>
-
-  <h3 class="section-title">Who We Are</h3>
-  <p>Since our inception in 1968, our mission has remained to offer the best solutions and services possible so that we are the smart choice, and the first choice for all our stakeholders. We operate exclusively through registered intermediaries and pride ourselves on long-term partnerships, innovation, reliable value-driven products, and client service. :contentReference[oaicite:6]{index=6}</p>
-
-  <a class="btn" id="contact" href="/contact">Contact Us</a>
-
-</div>
+<section class="contact">
+    <h2 class="section-title">Let’s Talk Aviation</h2>
+    <p>Ready to secure your aircraft or aviation operation?</p>
+    <br>
+    <a href="#" class="btn">Contact Us</a>
+</section>
 
 <footer>
-  <p>© 2026 Natsure Underwriting Managers. All Rights Reserved.</p>
+    © 2026 Chord Aviation Insurance | All Rights Reserved
 </footer>
 
 </body>
